@@ -1,0 +1,35 @@
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'header.phtml'; ?>
+<?php use App\Core\View; ?>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Email</th>
+            <th scope="col">Username</th>
+            <th scope="col">Registration Date</th>
+            <th scope="col">Active Until</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach ($data as $user) { ?>
+            <tr>
+                <td><?php if (isset($user['firstname'])) echo View::escapeHTML($user['firstname']); ?></td>
+                <td><?php if (isset($user['lastname'])) echo View::escapeHTML($user['lastname']); ?></td>
+                <td><?php if (isset($user['email'])) echo View::escapeHTML($user['email']); ?></td>
+                <td><?php if (isset($user['username'])) echo View::escapeHTML($user['username']); ?></td>
+                <td><?php if (isset($user['registrationDate'])) echo View::escapeHTML($user['registrationDate']); ?></td>
+                <td><?php if (isset($user['activeUntil'])) echo View::escapeHTML($user['activeUntil']); ?></td>
+                <td><a href="edit?id=<?php echo $user['id']; ?>">Edit</a></td>
+                <td><a href="delete?id=<?php echo $user['id']; ?>">Delete</a></td>
+                <!-- add edit and delete buttons -->
+            </tr>
+            <?php
+        }
+        ?>
+        </tbody>
+    </table>
+
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'footer.phtml'; ?>

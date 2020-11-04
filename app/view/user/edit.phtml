@@ -1,0 +1,34 @@
+<div class="container">
+    <h3>Edit book</h3>
+    <!--<form method="post" action="editPost" class="form">-->
+    <form method="post" action="edit" class="form">
+        <div class="form-group">
+            <label for="firstname">Firstname: </label>
+            <input type="text" name="firstname" id="firstname" value="<?php if(isset($data['firstname'])) echo $data['firstname']; ?>">
+        </div>
+        <input type="hidden" name="isbn" id="id" value="<?php if(isset($data['isbn'])) echo $data['isbn']; ?>">
+       <div class="form-group">
+           <label for="lastname">Lastname: </label>
+           <input type="text" name="lastname" id="lastname" value="<?php if(isset($data['firstname'])) echo $data['lastname']; ?>">
+       </div>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" value="<?php if(isset($data['email'])) echo $data['email']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" value="<?php if (isset($data['username'])) echo $data['username']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="registrationDate">Registration Date</label>
+            <input type="date" name="registrationDate" id="registrationDate" value="<?php if(isset($data['registrationDate'])) echo $data['registrationDate']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="activeUntil"></label>
+            <input type="date" name="activeUntil" id="activeUntil" value="<?php if(isset($data['activeUntil'])) echo $data['activeUntil']; ?>">
+        </div>
+        <div class="form-group">
+            <input type="submit" name="edit" value="Edit">
+        </div>
+    </form>
+</div>

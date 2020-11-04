@@ -1,0 +1,28 @@
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'header.phtml'; ?>
+<br>
+<div class="container">
+    <h3>Edit book</h3>
+    <!--<form method="post" action="editPost" class="form">-->
+    <form method="post" action="edit" class="form">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" value="<?php if(isset($data['title'])) echo $data['title']; ?>">
+        </div>
+        <input type="hidden" name="isbn" id="isbn" value="<?php if(isset($data['isbn'])) echo $data['isbn']; ?>">
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year" value="<?php if (isset($data['year'])) echo $data['year']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" value="<?php if(isset($data['author'])) echo $data['author']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="createdDate">Created Date</label>
+            <input type="date" name="createdDate" id="createdDate" value="<?php if (isset($data['createdDate'])) echo $data['createdDate']; ?>">
+        </div>
+        <div class="form-group">
+            <input type="submit" name="edit" value="Edit">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <?php if (isset($isLoggedIn) && $isLoggedIn) : ?>
+                <a class="nav-link" href="/library-mvc/PublicController/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/library-mvc/PublicController/register">Register</a>
+            </li>
+            <li class="nav-item">
+                <?php else : ?>
+                <a class="nav-link" href="/library-mvc/HomeController/index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/library-mvc/UserController/index">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/library-mvc/BookController/index">Books</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/library-mvc/PublicController/logout">Logout</a>
+                <?php endif; ?>
+            </li>
+        </ul>
+    </div>
+</nav>

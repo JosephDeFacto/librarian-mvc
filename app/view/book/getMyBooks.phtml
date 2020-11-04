@@ -1,0 +1,29 @@
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'header.phtml'; ?>
+<?php use App\Core\View; ?>
+
+<p>List of my books: </p>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">ISBN</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Year</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Date Rented</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    foreach ($data as $myBooks) {  ?>
+    <tr>
+        <td><?php echo $myBooks['isbn']; ?></td>
+    </tr>
+
+    <?php } ?>
+    </tbody>
+</table>
+
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'footer.phtml'; ?>
+

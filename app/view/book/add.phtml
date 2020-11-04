@@ -1,0 +1,29 @@
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'header.phtml'; ?>
+<div class="container">
+    <h3>Add new book</h3>
+    <form method="post" action="" class="form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year">
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+        </div>
+        <div class="form-group">
+            <label for="cover">Cover</label>
+            <input type="file" name="cover" id="cover">
+        </div>
+        <div class="form-group">
+            <label for="createdDate">Created Date</label>
+            <input type="date" name="createdDate" id="createdDate">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add">
+        </div>
+    </form>
+</div>

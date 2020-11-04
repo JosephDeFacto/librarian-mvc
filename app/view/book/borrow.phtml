@@ -1,0 +1,23 @@
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'header.phtml'; ?>
+<br>
+<div class="container">
+    <h3>Rent book</h3>
+    <form method="post" action="" class="form">
+        <div class="form-group">
+            <label for="book_id">ISBN</label>
+            <input type="number" name="book_id" id="book_id">
+        </div>
+        <div class="form-group">
+            <label for="user_id">User ID</label>
+            <input type="number" name="user_id" id="user_id">
+        </div>
+        <div class="form-group">
+            <label for="date_rented">Rent Date</label>
+            <input type="date" name="date_rented" id="date_rented">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Rent">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+<?php include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'header.phtml'; ?>
+
+<div class="container">
+    <h3>Register</h3>
+    <form method="post" action="" class="form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="firstname">Firstname: </label>
+            <input type="text" name="firstname" id="firstname" placeholder="Enter firstname">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Lastname: </label>
+            <input type="text" name="lastname" id="lastname" placeholder="Enter lastname">
+        </div>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+            <label for>Password: </label>
+            <input type="password" name="password" id="password" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+            <label for="confirm-pass">Confirm Password: </label>
+            <input type="password" name="confirm-pass" id="confirm-pass" placeholder="Confirm password"
+        </div>
+        <div class="form-group">
+            <label for="registrationDate">Registration Date: </label>
+            <input type="date" name="registrationDate" id="registrationDate">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="register">
+        </div>
+        <div>Already have an acoount? Please <a href="login">Login</a></div>
+    </form>
+</div>
